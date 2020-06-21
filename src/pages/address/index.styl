@@ -1,0 +1,80 @@
+@import '../../stylus/color.styl'
+.address
+  position: absolute
+  top: 2rem
+  width: 100%
+  min-height: 100%
+  background: #f7f7f7
+  z-index 2
+  overflow hidden
+  box-sizing: border-box
+  .address-list li
+    margin-bottom: 1rem
+    border-bottom: 1px solid #bfbfbf
+    padding: 1rem .5rem
+  .address-list-div
+    display: flex
+    .house
+      width: 1.5rem
+      height 1.5rem
+      background: url('./../../image/tarbar/house.png')
+      background-size: 100%
+      margin-top: 1rem
+      margin-right: .4rem
+      
+    .house.house_active
+      background: url('./../../image/tarbar/house_active.png')
+      background-size: 100%
+    .address-list-con
+      flex: 2
+      p
+        display: flex
+      p>:first-child
+        width: 4.5rem
+        display: inline-block
+        text-align: right 
+    .operate
+      margin-top: 1rem
+      a
+        display: block
+        text-align: center
+        font-size: .75rem
+      a.address-edit
+        color: $color_green
+      a.address-del
+        color: $color_red
+  .add-address
+    display: block
+    margin 2rem 2rem 0
+    padding: .4rem 0
+    text-align: center
+    border: 1px solid $color_green
+    border-radius: .2rem
+    background: $color_green
+    color: #ffffff
+  .address-pop
+    position: absolute
+    bottom: 0  
+    width: 100%
+    min-height: 28rem
+    border-top: 1px solid #b7b7b7
+    padding: 1rem
+    box-sizing: border-box
+    background: #f7f7f7
+    transition: .5s
+    transform: translate3d(0, 100%, 0)
+  .address-pop.active
+    transform: translate3d(0,0,0)
+    li
+      margin-bottom: 1rem
+  .address-pop-top
+    display: flex
+    margin-bottom: 2rem
+    justify-content: space-between
+    a
+      font-size: .85rem
+    h4
+      font-size: 1rem
+      color: $color_green
+    
+  
